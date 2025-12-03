@@ -143,4 +143,23 @@ h1,h2,h3,h4,h5,h6 {
   background:#F47B20;
   border-color:#F47B20;
 }
+/* Social icons styling */
+.social {
+  display: inline-flex;
+  gap: 1rem; /* space between icons */
+  justify-content: center; /* center them in hero section */
+  margin-top: 1rem;
+}
+
+.social i {
+  font-size: 2.2rem; /* bigger icons */
+  color: #ffffff; /* default white */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social i:hover {
+  color: #ff8200; /* BSU orange on hover */
+  transform: scale(1.2); /* slight pop-up effect */
+}
+
 
