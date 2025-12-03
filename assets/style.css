@@ -1,91 +1,89 @@
-:root{
-  /* Boise State colors */
-  --bsu-blue: #0033a0;
-  --bsu-orange: #ff6a00;
-  --muted: #6b7280;
-  --surface: #ffffff;
-  --glass: rgba(255,255,255,0.06);
-  --card-shadow: 0 8px 30px rgba(2,6,23,0.08);
-  --radius-lg: 14px;
+/* GLOBAL PAGE RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: #0033A0; /* Boise State Blue FULL PAGE */
+    color: #ffffff;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  margin:0;
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-  color:#111827;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #002570; /* Slightly darker BSU blue */
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 20px;
+    overflow-y: auto;
+    border-right: 4px solid #F47B20; /* Boise Orange */
 }
 
-/* NAVBAR */
-.navbar{
-  background: linear-gradient(90deg, rgba(0,51,160,0.95), rgba(0,41,120,0.92));
-  padding: .7rem 0;
-}
-.navbar .navbar-brand img.logo { width:34px; height:34px; object-fit:contain; filter: brightness(1.1) }
-.navbar .nav-link{ color: rgba(255,255,255,0.9); margin-left:.5rem; margin-right:.5rem;}
-.navbar .nav-link.active, .navbar .nav-link:hover{ color: var(--bsu-orange); font-weight:600 }
-.navbar .btn-outline-light{ border-color: rgba(255,255,255,0.18); color: #fff; }
-
-/* HERO */
-.hero-section{
-  background: linear-gradient(160deg, rgba(0,51,160,0.08), rgba(255,106,0,0.04));
-  padding: 4rem 0;
-  border-bottom: 1px solid rgba(2,6,23,0.04);
-}
-.hero-title{
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
-  margin:0;
-  color: var(--bsu-blue);
-  font-weight:800;
-}
-.hero-sub{
-  color:var(--muted);
-  font-size:1.05rem;
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* social icons */
-.social { display:inline-block; margin-right:.6rem; color: rgba(0,0,0,0.6); text-decoration:none; font-size:1.15rem; }
-.social i { background: #fff; padding: 7px; border-radius:8px; box-shadow: var(--card-shadow); color: var(--bsu-blue) }
-.social:hover i{ transform: translateY(-3px); transition: .18s ease }
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #F47B20; /* orange ring */
+}
 
-/* PROFILE */
-.profile-wrap{ display:inline-block; padding:1.25rem; background: linear-gradient(180deg, #fff, #fbfbff); border-radius:16px; box-shadow: var(--card-shadow); }
-.profile-photo{ width:180px; height:180px; object-fit:cover; border:6px solid #fff; }
+.name {
+    margin: 12px 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F47B20;
+}
 
-/* CTA card */
-.card-cta{ background: linear-gradient(90deg, rgba(0,51,160,0.06), rgba(255,106,0,0.02)); border-radius:12px; box-shadow:none; }
+.title {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-/* TIMELINE */
-.timeline{ margin-top:1rem; display:flex; flex-direction:column; gap:1rem; }
-.timeline-item{ display:flex; gap:1rem; align-items:flex-start; }
-.timeline-head img{ width:54px; height:54px; object-fit:contain; border-radius:8px; background:#fff; padding:6px; box-shadow: var(--card-shadow); }
-.timeline-head i{ font-size:34px; background:#fff; padding:10px; border-radius:12px; box-shadow: var(--card-shadow) }
-.timeline-body h5{ margin:0; color:#0f172a; font-weight:700; }
-.timeline-body p.small{ margin-bottom:.6rem; color:var(--muted) }
+/* SIDEBAR NAV LINKS */
+.nav-links a {
+    display: block;
+    color: #ffffff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-size: 17px;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+}
 
-/* PROJECT CARDS */
-.project-card{ border-radius:12px; overflow:hidden; transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 6px 18px rgba(8,15,40,0.06); }
-.project-card:hover{ transform: translateY(-6px); box-shadow: 0 14px 40px rgba(10,20,60,0.12); }
-.project-card .card-img-top{ height:170px; object-fit:cover; background: linear-gradient(90deg, rgba(0,51,160,0.04), rgba(255,106,0,0.02)); }
+.nav-links a:hover {
+    color: #F47B20;
+    border-left: 3px solid #F47B20;
+}
 
-/* SKILLS */
-.skill-list{ list-style:none; padding:0; margin:0; color:#0f172a }
-.skill-list li{ margin-bottom:.6rem; color:var(--muted) }
+/* MAIN CONTENT AREA */
+.main-content {
+    margin-left: 300px;
+    padding: 40px;
+    max-width: 900px;
+    background: #ffffff; /* white content panel */
+    color: #000000;
+    min-height: 100vh;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
 
-/* CONTACT FORM */
-.contact-form .form-control{ border-radius:8px; border:1px solid #e6e9ef; box-shadow:none; }
-.contact-form button{ border-radius:8px }
+/* HEADINGS */
+h1 {
+    color: #0033A0;
+    border-bottom: 3px solid #F47B20;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
 
-/* FOOTER */
-.footer{ background: #fff; border-top: 1px solid rgba(2,6,23,0.04); }
-
-/* small screens */
-@media (max-width:767px){
-  .profile-photo{ width:140px; height:140px }
-  .hero-section{ padding: 2.6rem 0 }
-  .navbar .nav-link{ font-size:.95rem }
+/* SECTIONS */
+section {
+    margin-bottom: 60px;
+    line-height: 1.7;
+    font-size: 17px;
 }
