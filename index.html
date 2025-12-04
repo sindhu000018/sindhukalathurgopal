@@ -1,131 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sindhu Reddy Kalathur Gopal — Assistant Professor @ Boise State University</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
+  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/style.css">
-  <meta name="description" content="Sindhu Reddy Kalathur Gopal — Assistant Professor @ Boise State University. Research in behavioral biometrics, brainwave authentication, and VR security.">
+  <!-- AOS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- typed.js (local file) -->
-  <script defer src="assets/vendor/typed.js/typed.min.js"></script>
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <meta name="description" content="Sindhu Reddy Kalathur Gopal — Assistant Professor @ Boise State University. Research in behavioral biometrics, brainwave authentication, and VR security.">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="100" tabindex="0">
+<body>
 
 <!-- SIDEBAR -->
-<nav id="sidebar" class="sidebar bg-bsublue text-white">
-  <div class="text-center py-4">
-    <img src="assets/img/profile.png" alt="Profile" class="profile-img mb-2">
-    <h4 class="fw-bold text-warning">Sindhu Reddy Kalathur Gopal</h4>
-    <small class="typing d-block text-warning fw-semibold mt-1"></small> <!-- typed.js target -->
-  </div>
+<aside id="sidebar" class="sidebar" aria-label="Primary">
+  <div class="sidebar-inner text-center">
+    <img src="assets/img/profile.png" alt="Sindhu profile" class="profile-img" />
+    <h3 class="sidebar-name">Sindhu Reddy Kalathur Gopal</h3>
+    <div class="typing-wrap"><span class="typing" aria-live="polite"></span></div>
 
-  <ul class="nav flex-column mt-4">
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#about">About</a></li>
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#experience">Experience</a></li>
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#projects">Projects</a></li>
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#skills">Skills</a></li>
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#education">Education</a></li>
-    <li class="nav-item"><a class="nav-link btn btn-outline-warning mt-3" href="#contact">Contact</a></li>
+    <nav class="sidebar-nav mt-3" aria-label="Main navigation">
+      <a class="btn btn-outline-light w-100 mb-2" href="#about">About</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#experience">Experience</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#projects">Projects</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#skills">Skills</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#education">Education</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#publications">Publications</a>
+      <a class="btn btn-outline-light w-100 mb-2" href="#contact">Contact</a>
 
-    <!-- Resume moved to sidebar (prominent) -->
-    <li class="nav-item mt-3">
-      <a class="nav-link btn btn-warning w-100 d-flex align-items-center justify-content-center" href="https://drive.google.com/YOUR-RESUME-LINK" target="_blank">
+      <!-- Resume (prominent) -->
+      <a class="btn btn-warning w-100 mt-3 resume-btn" href="https://drive.google.com/YOUR-RESUME-LINK" target="_blank" rel="noopener">
         <i class="bi bi-file-earmark-person-fill me-2"></i> Resume
       </a>
-    </li>
+    </nav>
 
-    <!-- Social icons in sidebar (visible) -->
-    <li class="nav-item mt-4 text-center">
-      <a class="social me-2" href="https://www.linkedin.com/in/sindhureddy0018/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      <a class="social me-2" href="https://github.com/sindhu000018" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      <a class="social me-2" href="https://tinyurl.com/yckbz6fj" target="_blank" aria-label="Publications"><i class="bi bi-journals"></i></a>
-      <a class="social" href="mailto:sindhukalathur@boisestate.edu" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
-    </li>
-  </ul>
-</nav>
+    <!-- social icons -->
+    <div class="sidebar-social mt-4">
+      <a href="https://www.linkedin.com/in/sindhureddy0018/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/sindhu000018" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://tinyurl.com/yckbz6fj" target="_blank" aria-label="Publications"><i class="bi bi-journals"></i></a>
+      <a href="mailto:sindhukalathur@boisestate.edu" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+    </div>
 
-<!-- MAIN CONTENT -->
-<div class="main-content ms-sidebar">
+    <!-- Light/Dark toggle -->
+    <div class="mode-toggle mt-4">
+      <button id="modeToggle" class="btn btn-outline-light btn-sm">Dark mode</button>
+    </div>
 
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main-content" id="mainContent">
   <!-- HERO -->
-  <header class="hero-section py-5">
-    <div class="container text-center">
-      <h1 class="hero-title">Sindhu Reddy Kalathur Gopal</h1>
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="hero-title">Sindhu Reddy Kalathur Gopal</h1>
+          <p class="hero-sub lead">Assistant Professor @ Boise State University — research in <strong>Behavioral Biometrics</strong>, <strong>EEG / Brainwave Authentication</strong>, and <strong>VR/AR Security</strong>.</p>
 
-      <!-- short typed role removed from hero (it's in sidebar) -->
-      <p class="hero-sub mt-3">Assistant Professor @ Boise State University — Research in <strong>Behavioral Biometrics</strong>, <strong>Brainwave (EEG) Authentication</strong>, and <strong>VR/AR Security</strong>.</p>
+          <div class="hero-cta mt-3">
+            <!-- Contact in hero removed as requested -->
+            <a class="btn btn-outline-primary btn-lg me-2" href="#about">Read more</a>
+          </div>
 
-      <!-- Projects removed from hero; Resume moved to sidebar -->
-      <div class="mt-3">
-        <a class="btn btn-outline-light btn-lg me-2" href="#contact"><i class="bi bi-envelope-fill me-1"></i> Contact</a>
-      </div>
+          <!-- hero social (visible on larger screens) -->
+          <div class="hero-social mt-4 d-none d-md-inline-flex">
+            <a href="https://www.linkedin.com/in/sindhureddy0018/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/sindhu000018" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://tinyurl.com/yckbz6fj" target="_blank" aria-label="Publications"><i class="bi bi-journals"></i></a>
+            <a href="mailto:sindhukalathur@boisestate.edu" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
 
-      <!-- Read more ↓ -->
-      <a href="#about" class="btn btn-outline-light mt-4 read-more">Read More ↓</a>
-
-      <!-- hero social icons visible (in addition to sidebar) -->
-      <div class="mt-4 d-none d-md-inline-block">
-        <a class="social me-2" href="https://www.linkedin.com/in/sindhureddy0018/" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a class="social me-2" href="https://github.com/sindhu000018" target="_blank"><i class="bi bi-github"></i></a>
-        <a class="social me-2" href="https://tinyurl.com/yckbz6fj" target="_blank"><i class="bi bi-journals"></i></a>
-        <a class="social" href="mailto:sindhukalathur@boisestate.edu"><i class="bi bi-envelope-fill"></i></a>
+        <div class="col-lg-4 text-center">
+          <!-- profile image placed in sidebar; keep this decorative image small and framed -->
+          <div class="hero-profile">
+            <img src="assets/img/profile.png" alt="Sindhu profile" class="hero-profile-img" />
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="container my-5">
-
-    <!-- ABOUT -->
-    <section id="about" class="mb-5">
+  <!-- About -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
       <div class="row">
         <div class="col-lg-8">
           <h2>About</h2>
-          <p class="lead">
-            I’m an Assistant Professor at Boise State University. I research the security and privacy of human–computer interfaces and smart wearables — with emphasis on behavioral biometrics, EEG-based authentication (BrainKey), and adversarial threats to VR/AR systems.
-          </p>
-          <p>
-            My approach combines signal processing, machine learning, and system-level security to build authentication systems that are robust, privacy-preserving, and deployable in real-world devices. I supervise students, teach courses in cybersecurity and applied machine learning, and collaborate across neuroscience and engineering teams.
-          </p>
+          <p class="lead">I’m an Assistant Professor at Boise State University. I research the security and privacy of human–computer interfaces and smart wearables — with emphasis on behavioral biometrics, EEG-based authentication (BrainKey), and adversarial threats to VR/AR systems.</p>
+          <p>My approach combines signal processing, machine learning, and system-level security to build authentication systems that are robust, privacy-preserving, and deployable in real-world devices. I supervise students, teach courses in cybersecurity and applied machine learning, and collaborate across neuroscience and engineering teams.</p>
         </div>
-
         <div class="col-lg-4">
-          <div class="card card-cta mb-3">
-            <div class="card-body">
-              <h6 class="card-title mb-1">Open for</h6>
-              <p class="mb-1">Collaborations in wearable security, student mentorship, and funded research proposals.</p>
-              <a href="#contact" class="stretched-link">Contact me →</a>
-            </div>
+          <div class="card card-cta p-3">
+            <h6 class="mb-1">Open for</h6>
+            <p class="mb-1">Collaborations in wearable security, student mentorship, and funded research proposals.</p>
+            <a href="#contact" class="stretched-link">Contact me →</a>
           </div>
 
-          <ul class="list-unstyled">
+          <ul class="mt-3 list-unstyled">
             <li><strong>Email:</strong> <a href="mailto:sindhukalathur@boisestate.edu">sindhukalathur@boisestate.edu</a></li>
             <li><strong>Location:</strong> Boise, ID</li>
             <li><strong>Availability:</strong> Accepting PhD / MS students</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="mb-5">
+  <!-- Experience (animated timeline) -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
       <h2>Experience</h2>
+
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right">
           <div class="timeline-head"><img src="assets/img/bsu-mark.png" alt="BSU"></div>
           <div class="timeline-body">
             <h5>Assistant Professor — Boise State University</h5>
-            <p class="text-muted small">Boise, ID</p>
+            <p class="text-muted small">Starting 2025 • Boise, ID</p>
             <ul>
               <li>Build and lead a lab on wearable security, behavioral biometrics, and adversarial ML.</li>
               <li>Teach undergraduate and graduate courses in cybersecurity and machine learning.</li>
@@ -133,7 +138,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="80">
           <div class="timeline-head"><img src="assets/img/uw.png" alt="UW"></div>
           <div class="timeline-body">
             <h5>Graduate Research Assistant — University of Wyoming</h5>
@@ -145,21 +150,23 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="140">
           <div class="timeline-head"><i class="bi bi-laptop"></i></div>
           <div class="timeline-body">
-            <h5>Industry</h5>
+            <h5>Industry — QA & Test Automation</h5>
             <p class="text-muted small">2015–2019</p>
             <ul>
-              <li>Java Developer.</li>
+              <li>ETL validation, Selenium automation, end-to-end migration testing (Netezza → Snowflake).</li>
             </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="mb-5">
+  <!-- Projects -->
+  <section id="projects" class="section" data-aos="fade-up">
+    <div class="container">
       <h2>Ongoing Projects</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
@@ -168,10 +175,6 @@
             <div class="card-body">
               <h5 class="card-title">BrainKey — EEG Authentication</h5>
               <p class="card-text">ERP-based key entry using recall signals. Focus on robustness, privacy, and session variability analysis.</p>
-            </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="card-link">Paper</a>
-              <a href="#" class="card-link">Code</a>
             </div>
           </div>
         </div>
@@ -183,31 +186,37 @@
               <h5 class="card-title">VR Behavioral Biometrics</h5>
               <p class="card-text">Authentication using head & hand motion patterns in immersive environments. Usability + attack resistance.</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="card-link">Paper</a>
-              <a href="#" class="card-link">Slides</a>
-            </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="card project-card h-100">
-            <img src="assets/img/emotiv.png" class="card-img-top" alt="Emotiv pipeline">
+            <img src="assets/img/emotiv.png" class="card-img-top" alt="Emotiv">
             <div class="card-body">
               <h5 class="card-title">EEG Pipelines (Emotiv)</h5>
               <p class="card-text">Signal processing, ERP extraction, and ML models for cognitive-state recognition from consumer EEG.</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="card-link">Paper</a>
-              <a href="#" class="card-link">Dataset</a>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="mb-5">
+  <!-- Publications / News -->
+  <section id="publications" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Recent Publications & News</h2>
+      <ul class="list-unstyled">
+        <li><strong>2025</strong> — BrainKey: EEG recall-based authentication (paper — coming)</li>
+        <li><strong>2024</strong> — VR Behavioral Biometrics: conference demo</li>
+      </ul>
+      <p class="mt-3"><a href="#publications" class="link-more">See full publications</a></p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
       <h2>Skills & Tools</h2>
       <div class="row">
         <div class="col-md-6">
@@ -225,24 +234,24 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="mb-5">
+  <!-- Education -->
+  <section id="education" class="section" data-aos="fade-up">
+    <div class="container">
       <h2>Education</h2>
-      <div class="row">
-        <div class="col-md-8">
-          <p><strong>Ph.D., Computer Science</strong> — University of Wyoming (Graduating Spring 2025)<br>
-          Focus: Brainwave-based authentication (BrainKey), VR behavioral biometrics, wearable security.</p>
-          <p><strong>B.Tech., Computer Science</strong> — Anna University</p>
-        </div>
-      </div>
-    </section>
+      <p><strong>Ph.D., Computer Science</strong> — University of Wyoming (Graduating Spring 2025)<br>Focus: Brainwave-based authentication (BrainKey), VR behavioral biometrics, wearable security.</p>
+      <p><strong>B.Tech., Computer Science</strong> — (Your undergraduate institution)</p>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="mb-5">
+  <!-- Contact -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
       <h2>Contact</h2>
       <p>If you'd like to collaborate, invite me to give a seminar, or discuss student opportunities, please reach out:</p>
+
       <div class="row">
         <div class="col-md-6">
           <p><strong>Email</strong>: <a href="mailto:sindhukalathur@boisestate.edu">sindhukalathur@boisestate.edu</a></p>
@@ -257,66 +266,71 @@
           </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="footer py-4 text-center text-white">
-    <small>© <span id="year"></span> Sindhu Reddy Kalathur Gopal — Assistant Professor @ Boise State University</small>
+  <footer class="site-footer text-center py-4">
+    <div class="container">
+      <small>© <span id="year"></span> Sindhu Reddy Kalathur Gopal — Assistant Professor @ Boise State University</small>
+    </div>
   </footer>
+</main>
 
-</div>
-
-<!-- Bootstrap JS -->
+<!-- Scripts: CDN typed.js and AOS; bootstrap bundle last -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // Year in footer
+  // initialize AOS
+  AOS.init({ duration: 700, once: true, easing: 'ease-out-quad' });
+
+  // typed.js (sidebar)
+  const typed = new Typed('.typing', {
+    strings: ["Cybersecurity Researcher", "Behavioral Biometrics Specialist", "EEG / Brainwave Authentication", "VR/AR Security"],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1100,
+    loop: true,
+    showCursor: true
+  });
+
+  // year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Smooth scroll for sidebar nav links
-  document.querySelectorAll('#sidebar a.nav-link, #sidebar a.btn').forEach(a=>{
-    a.addEventListener('click', e=>{
+  // Smooth scroll for sidebar links
+  document.querySelectorAll('.sidebar-nav a, .sidebar .btn').forEach(el=>{
+    el.addEventListener('click', e=>{
+      // allow external (resume) links to function
+      const href = el.getAttribute('href');
+      if(!href || href.startsWith('http')) return;
       e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
+      const target = document.querySelector(href);
       if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
 
-  // highlight active nav item on scroll
-  const navLinks = document.querySelectorAll('#sidebar .nav-link');
-  const sections = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href')));
-  window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 140;
-    navLinks.forEach((link, idx) => {
-      const sec = sections[idx];
-      if(!sec) return;
-      const top = sec.offsetTop;
-      const bottom = top + sec.offsetHeight;
-      if(scrollPos >= top && scrollPos < bottom) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  });
-
-  // typed.js: ensure library loaded (deferred script) before creating instance
-  function startTyped() {
-    if (typeof Typed === 'undefined') {
-      // try again shortly
-      setTimeout(startTyped, 200);
-      return;
+  // Light/dark mode toggle
+  const modeToggle = document.getElementById('modeToggle');
+  const root = document.documentElement;
+  function applyMode(mode){
+    if(mode === 'dark'){
+      root.classList.add('dark-mode');
+      modeToggle.textContent = 'Light mode';
+      localStorage.setItem('site-mode','dark');
+    } else {
+      root.classList.remove('dark-mode');
+      modeToggle.textContent = 'Dark mode';
+      localStorage.setItem('site-mode','light');
     }
-    new Typed('.typing', {
-      strings: ["Cybersecurity Researcher", "Behavioral Biometrics Specialist", "EEG Authentication", "VR/AR Security"],
-      loop: true,
-      typeSpeed: 60,
-      backSpeed: 35,
-      backDelay: 1000
-    });
   }
-  startTyped();
+  // init mode
+  const stored = localStorage.getItem('site-mode') || 'light';
+  applyMode(stored);
+  modeToggle.addEventListener('click', ()=>{
+    const current = root.classList.contains('dark-mode') ? 'dark' : 'light';
+    applyMode(current === 'dark' ? 'light' : 'dark');
+  });
 </script>
 </body>
 </html>
