@@ -141,15 +141,23 @@ body{
 .fade-in-up{ opacity:0; transform: translateY(10px); animation:fadeInUp .6s ease forwards; }
 @keyframes fadeInUp{ to{ opacity:1; transform:none; } }
 
-.social a i {
-    font-size: 2rem;
-    color: #ffffff !important; /* brighter */
-    opacity: 1; /* ensure full visibility */
-    transition: 0.3s ease;
+.hero-social-icons a svg,
+.hero-social-icons a i {
+    width: 34px;
+    height: 34px;
+    color: #F36F21 !important;     /* BSU orange */
+    stroke: #F36F21 !important;
+    stroke-width: 2.4;
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(243, 111, 33, 0.9));
+    transition: all 0.3s ease;
 }
 
-.social a i:hover {
-    color: #F47B20 !important; /* BSU orange */
-    transform: scale(1.25);
+.hero-social-icons a:hover svg,
+.hero-social-icons a:hover i {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px rgba(243, 111, 33, 1));
 }
+
+
 
