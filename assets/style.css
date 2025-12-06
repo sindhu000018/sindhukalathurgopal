@@ -1,143 +1,122 @@
-/* =========================
-   BSU-branded stylesheet
-   ========================= */
-:root{
-  --bsu-blue: #0033A0;
-  --bsu-blue-dark: #002570;
-  --bsu-orange: #F47B20;
-  --muted: #6b7280;
-  --content-bg: #F7FAFF;
-  --card-shadow: 0 10px 30px rgba(2,6,23,0.06);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhu Kalathur Gopal — Assistant Professor</title>
 
-/* Reset & base */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-  background: linear-gradient(180deg,#E8F1FF 0%, #ffffff 60%);
-  color:#0f172a;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-/* Dark mode */
-:root.dark-mode{
-  --content-bg: #091023;
-  --muted: #94a3b8;
-  --bsu-blue: #0b2a66;
-  --bsu-orange: #ffb27a;
-  background: linear-gradient(180deg,#06102a, #071428 80%);
-  color: #e6eef7;
-}
-:root.dark-mode .main-content{ background: #071428; color:#dbeafe; }
-:root.dark-mode .card { box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-/* Sidebar */
-.sidebar{
-  position: fixed;
-  left:0; top:0;
-  width: 260px;
-  height:100%;
-  background: var(--bsu-blue-dark);
-  color:#fff;
-  padding: 22px 14px;
-  border-right: 4px solid var(--bsu-orange);
-  overflow-y:auto;
-  z-index: 999;
-}
-.sidebar-inner{text-align:center}
-.profile-img{
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--bsu-orange);
-  display:block;
-  margin: 0 auto;
-}
-.sidebar-name{ margin-top:10px; font-weight:700; color:var(--bsu-orange); font-size:1.05rem; }
-.typing-wrap{ margin-top:6px; }
-.typing{ color: #fff; font-weight:600; font-style:normal; display:inline-block; }
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
 
-/* sidebar nav buttons */
-.sidebar-nav { margin-top:16px; display:flex; flex-direction:column; gap:8px; }
-.sidebar-nav .btn{
-  text-align:left;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.06);
-  color:#fff;
-  transition: all .14s ease;
-  padding: 10px 12px;
-  border-radius:8px;
-}
-.sidebar-nav .btn:hover{ background: rgba(255,255,255,0.03); color: var(--bsu-orange); transform: translateY(-2px); }
+<body>
 
-/* resume button */
-.resume-btn{ background: var(--bsu-orange); border-color: var(--bsu-orange); color:#fff; font-weight:600; }
+<!-- ============================= SIDEBAR ============================= -->
+<div class="sidebar">
+    <div class="profile-section">
+        <img src="assets/img/profile.png" alt="Profile" class="profile-img">
 
-/* social icons (sidebar & hero) */
-.sidebar-social, .hero-social, .hero-social a{ display:inline-flex; gap:.6rem; align-items:center; }
-.sidebar-social a, .hero-social a{ color:#fff; font-size:1.4rem; padding:8px; border-radius:8px; transition: all .14s ease; text-decoration:none; }
-.sidebar-social a:hover, .hero-social a:hover{ color: var(--bsu-orange); transform: translateY(-3px); }
+        <h2 class="name">Sindhu Reddy Kalathur Gopal</h2>
+        <p class="title">Assistant Professor • Cybersecurity & Applied ML</p>
 
-/* main content */
-.main-content{
-  margin-left: 260px;
-  padding: 34px;
-  min-height:100vh;
-  background: var(--content-bg);
-  color: inherit;
-  box-shadow: -6px 0 22px rgba(2,6,23,0.04);
-}
+        <div class="typing-wrap">
+            <span class="typing"></span>
+        </div>
 
-/* hero */
-.hero{ padding: 28px 0; border-radius: 12px; background: linear-gradient(135deg, rgba(0,51,160,0.04), rgba(244,123,32,0.02)); }
-.hero-title{ font-size: clamp(1.8rem, 3.2vw, 2.6rem); color: var(--bsu-blue); font-weight:800; margin-bottom:12px; }
-.hero-sub{ font-size: 1.05rem; color: #0f172a; }
-.hero-cta .btn{ margin-right: 8px; }
+        <!-- SOCIAL ICONS -->
+        <div class="social">
+            <a href="mailto:sindhukalathurgopal@boisestate.edu"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://linkedin.com/in/sindhukalathurgopal" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://scholar.google.com" target="_blank"><i class="bi bi-mortarboard-fill"></i></a>
+        </div>
+    </div>
 
-/* hero profile image */
-.hero-profile-img{ width: 220px; height: 220px; object-fit: cover; border-radius:12px; border: 6px solid #fff; box-shadow: var(--card-shadow); }
+    <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research-group">Research Group</a>
+        <a href="#news">Recent News</a>
+        <a href="#publications">Publications</a>
+        <a href="assets/files/Sindhu_CV.pdf" target="_blank">CV</a>
+    </nav>
+</div>
 
-/* cards */
-.card{ border-radius:12px; border:none; box-shadow: var(--card-shadow); overflow:hidden; }
-.card-cta{ padding:14px; background: linear-gradient(90deg, rgba(0,51,160,0.04), rgba(244,123,32,0.02)); }
 
-/* timeline */
-.timeline{ margin-top:18px; display:flex; flex-direction:column; gap:18px; }
-.timeline-item{ display:flex; gap:14px; align-items:flex-start; }
-.timeline-head{ width:64px; flex:0 0 64px; }
-.timeline-head img{ width:56px; height:56px; object-fit:contain; border-radius:8px; background:#fff; padding:6px; box-shadow: var(--card-shadow); }
-.timeline-body h5{ margin:0 0 6px 0; font-weight:700; color:var(--bsu-blue); }
+<!-- ============================= MAIN CONTENT ============================= -->
+<div class="main-content">
 
-/* project card images */
-.project-card .card-img-top{ height:160px; object-fit:cover; }
+    <!-- ABOUT -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>
+            I am an Assistant Professor in the Department of Computer Science at Boise State University.
+            My research focuses on cybersecurity, offensive and defensive analysis of computing devices,
+            brainwave authentication, behavioral biometrics, and AI-driven user authentication for VR 
+            and emerging systems.
+        </p>
+    </section>
 
-/* lists & skills */
-.skill-list{ list-style:none; margin:0; padding:0; color:var(--muted); }
-.skill-list li{ margin-bottom: .6rem; }
+    <!-- RESEARCH GROUP -->
+    <section id="research-group">
+        <h1>Research Group</h1>
+        <p>
+            Our group investigates multimodal biometric authentication, VR-based user verification,
+            EEG/ERP-driven authentication, and adversarial analysis of machine learning models.
+        </p>
 
-/* publications */
-.link-more{ color: var(--bsu-blue); font-weight:600; text-decoration:underline; }
+        <h3>Research Areas</h3>
+        <ul>
+            <li>Behavioral Biometrics & Active Authentication</li>
+            <li>Brainwave Authentication using ERP signals</li>
+            <li>VR Security: hand/head motion modeling</li>
+            <li>AI-based threat modeling & signal processing</li>
+        </ul>
 
-/* contact form styles */
-.contact-form .form-control{ border-radius:8px; }
+        <h3>Collaboration Team</h3>
+        <ul>
+            <li>Graduate & Undergraduate Students (BSU)</li>
+            <li>Collaborators from URI, Datwyler, and partner labs</li>
+        </ul>
+    </section>
 
-/* footer */
-.site-footer{ margin-top:30px; color: #0f172a; }
+    <!-- RECENT NEWS -->
+    <section id="news">
+        <h1>Recent News</h1>
+        <ul>
+            <li><strong>2025:</strong> Selected for NSF CICI proposal on brainwave authentication.</li>
+            <li><strong>2025:</strong> Started as Assistant Professor at Boise State University.</li>
+            <li><strong>2024:</strong> Published BrainKey EEG-based authentication framework.</li>
+            <li><strong>2024:</strong> Awarded GAP funding for multimodal behavior security.</li>
+        </ul>
+    </section>
 
-/* responsive */
-@media (max-width: 991px){
-  .sidebar{ position:relative; width:100%; height:auto; border-right:none; border-bottom:4px solid var(--bsu-orange); display:flex; gap:12px; align-items:center; padding:12px; }
-  .sidebar-inner{ display:flex; gap:12px; align-items:center; width:100%; }
-  .profile-img{ width:64px; height:64px; border-width:3px; }
-  .sidebar-nav{ flex-direction:row; flex-wrap:wrap; gap:6px; margin-top:8px; }
-  .main-content{ margin-left:0; padding:18px; }
-  .hero-profile-img{ width:140px; height:140px; }
-}
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+        <h1>Publications</h1>
+        <p>A formatted publications list can go here.</p>
+    </section>
 
-/* subtle animation helpers */
-.fade-in-up{ opacity:0; transform: translateY(10px); animation:fadeInUp .6s ease forwards; }
-@keyframes fadeInUp{ to{ opacity:1; transform:none; } }
+</div>
+
+<script>
+    // Typing Animation
+    new Typed(".typing", {
+        strings: [
+            "Cybersecurity Researcher",
+            "Behavioral Biometrics",
+            "Brainwave Authentication",
+            "AI for Security"
+        ],
+        typeSpeed: 60,
+        backSpeed: 30,
+        loop: true
+    });
+</script>
+
+</body>
+</html>
