@@ -93,7 +93,7 @@ body{
 
 /* hero */
 .hero{ padding: 28px 0; border-radius: 12px; background: linear-gradient(135deg, rgba(0,51,160,0.04), rgba(244,123,32,0.02)); }
-.hero-title{ font-size: clamp(1.8rem, 3.2vw, 2.6rem); color: var(--bsu-blue); font-weight:800; margin-bottom:12px; }
+.hero-title{ font-size: clamp(1.8rem, 3.2vw, 2.6rem); color: var(--bsu-orange); font-weight:800; margin-bottom:12px; }
 .hero-sub{ font-size: 1.05rem; color: #0f172a; }
 .hero-cta .btn{ margin-right: 8px; }
 
@@ -145,19 +145,22 @@ body{
 .hero-social-icons a i {
     width: 34px;
     height: 34px;
-    color: #F36F21 !important;     /* BSU orange */
+    color: #F36F21 !important;  /* For font icons */
+    fill: #F36F21 !important;   /* For SVG icons */
     stroke: #F36F21 !important;
     stroke-width: 2.4;
-    opacity: 1;
-    filter: drop-shadow(0 0 4px rgba(243, 111, 33, 0.9));
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 4px rgba(243, 111, 33, 1));
     transition: all 0.3s ease;
 }
+
 
 .hero-social-icons a:hover svg,
 .hero-social-icons a:hover i {
     transform: scale(1.2);
     filter: drop-shadow(0 0 8px rgba(243, 111, 33, 1));
 }
+
 
 
 
