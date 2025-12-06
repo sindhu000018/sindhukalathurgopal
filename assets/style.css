@@ -1,122 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sindhu Kalathur Gopal — Assistant Professor</title>
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: #0033A0; /* BSU Blue */
+    color: #ffffff;
+}
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+/* ======================= SIDEBAR ======================= */
+.sidebar {
+    width: 260px;
+    background: #002570; /* darker blue */
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 20px;
+    overflow-y: auto;
+    border-right: 4px solid #F47B20; /* BSU orange */
+}
 
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+.profile-section {
+    text-align: center;
+}
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+.profile-img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: 4px solid #F47B20;
+    object-fit: cover;
+    object-position: top;
+}
 
-<body>
+.name {
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    color: #F47B20;
+}
 
-<!-- ============================= SIDEBAR ============================= -->
-<div class="sidebar">
-    <div class="profile-section">
-        <img src="assets/img/profile.png" alt="Profile" class="profile-img">
+.title {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-        <h2 class="name">Sindhu Reddy Kalathur Gopal</h2>
-        <p class="title">Assistant Professor • Cybersecurity & Applied ML</p>
+/* Typing animation */
+.typing-wrap {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ffffff;
+}
 
-        <div class="typing-wrap">
-            <span class="typing"></span>
-        </div>
+/* SOCIAL ICONS */
+.social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
 
-        <!-- SOCIAL ICONS -->
-        <div class="social">
-            <a href="mailto:sindhukalathurgopal@boisestate.edu"><i class="bi bi-envelope-fill"></i></a>
-            <a href="https://linkedin.com/in/sindhukalathurgopal" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://scholar.google.com" target="_blank"><i class="bi bi-mortarboard-fill"></i></a>
-        </div>
-    </div>
+.social i {
+    font-size: 1.9rem;
+    color: #fff !important;
+    opacity: 1;
+    transition: 0.3s ease;
+}
 
-    <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research-group">Research Group</a>
-        <a href="#news">Recent News</a>
-        <a href="#publications">Publications</a>
-        <a href="assets/files/Sindhu_CV.pdf" target="_blank">CV</a>
-    </nav>
-</div>
+.social i:hover {
+    color: #F47B20 !important;
+    transform: scale(1.2);
+}
 
+/* NAV LINKS */
+.nav-links {
+    margin-top: 25px;
+}
 
-<!-- ============================= MAIN CONTENT ============================= -->
-<div class="main-content">
+.nav-links a {
+    display: block;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 17px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+}
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h1>About Me</h1>
-        <p>
-            I am an Assistant Professor in the Department of Computer Science at Boise State University.
-            My research focuses on cybersecurity, offensive and defensive analysis of computing devices,
-            brainwave authentication, behavioral biometrics, and AI-driven user authentication for VR 
-            and emerging systems.
-        </p>
-    </section>
+.nav-links a:hover {
+    color: #F47B20;
+    border-left: 3px solid #F47B20;
+}
 
-    <!-- RESEARCH GROUP -->
-    <section id="research-group">
-        <h1>Research Group</h1>
-        <p>
-            Our group investigates multimodal biometric authentication, VR-based user verification,
-            EEG/ERP-driven authentication, and adversarial analysis of machine learning models.
-        </p>
+/* ======================= MAIN CONTENT ======================= */
+.main-content {
+    margin-left: 300px;
+    padding: 40px;
+    background: #ffffff;
+    color: #000;
+    min-height: 100vh;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    width: calc(100% - 300px);
+}
 
-        <h3>Research Areas</h3>
-        <ul>
-            <li>Behavioral Biometrics & Active Authentication</li>
-            <li>Brainwave Authentication using ERP signals</li>
-            <li>VR Security: hand/head motion modeling</li>
-            <li>AI-based threat modeling & signal processing</li>
-        </ul>
+/* HEADERS */
+h1 {
+    color: #0033A0;
+    border-bottom: 3px solid #F47B20;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
 
-        <h3>Collaboration Team</h3>
-        <ul>
-            <li>Graduate & Undergraduate Students (BSU)</li>
-            <li>Collaborators from URI, Datwyler, and partner labs</li>
-        </ul>
-    </section>
+h3 {
+    color: #0033A0;
+    margin-top: 20px;
+}
 
-    <!-- RECENT NEWS -->
-    <section id="news">
-        <h1>Recent News</h1>
-        <ul>
-            <li><strong>2025:</strong> Selected for NSF CICI proposal on brainwave authentication.</li>
-            <li><strong>2025:</strong> Started as Assistant Professor at Boise State University.</li>
-            <li><strong>2024:</strong> Published BrainKey EEG-based authentication framework.</li>
-            <li><strong>2024:</strong> Awarded GAP funding for multimodal behavior security.</li>
-        </ul>
-    </section>
+/* CONTENT */
+section {
+    margin-bottom: 60px;
+    font-size: 17px;
+    line-height: 1.7;
+}
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-        <h1>Publications</h1>
-        <p>A formatted publications list can go here.</p>
-    </section>
-
-</div>
-
-<script>
-    // Typing Animation
-    new Typed(".typing", {
-        strings: [
-            "Cybersecurity Researcher",
-            "Behavioral Biometrics",
-            "Brainwave Authentication",
-            "AI for Security"
-        ],
-        typeSpeed: 60,
-        backSpeed: 30,
-        loop: true
-    });
-</script>
-
-</body>
-</html>
+ul li {
+    margin-bottom: 8px;
+}
