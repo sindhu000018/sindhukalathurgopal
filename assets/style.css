@@ -98,7 +98,7 @@ body{
 .hero-cta .btn{ margin-right: 8px; }
 
 /* hero profile image */
-.hero-profile-img{ width: 220px; height: 220px; object-fit: cover; border-radius:12px; border: 6px solid #fff; box-shadow: var(--card-shadow); }
+.hero-profile-img{ width: 220px; height: 220px; object-fit: cover; object-position: top; border-radius:12px; border: 6px solid #fff; box-shadow: var(--card-shadow); }
 
 /* cards */
 .card{ border-radius:12px; border:none; box-shadow: var(--card-shadow); overflow:hidden; }
@@ -140,3 +140,16 @@ body{
 /* subtle animation helpers */
 .fade-in-up{ opacity:0; transform: translateY(10px); animation:fadeInUp .6s ease forwards; }
 @keyframes fadeInUp{ to{ opacity:1; transform:none; } }
+
+.social a i {
+    font-size: 2rem;
+    color: #ffffff !important; /* brighter */
+    opacity: 1; /* ensure full visibility */
+    transition: 0.3s ease;
+}
+
+.social a i:hover {
+    color: #F47B20 !important; /* BSU orange */
+    transform: scale(1.25);
+}
+
