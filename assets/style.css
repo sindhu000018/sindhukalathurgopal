@@ -92,7 +92,15 @@ body{
 }
 
 /* hero */
-.hero{ padding: 28px 0; border-radius: 12px; background: linear-gradient(135deg, rgba(0,51,160,0.04), rgba(244,123,32,0.02)); }
+.hero {
+    padding: 28px 0;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 51, 160, 0.10),   /* BSU Blue — darker & more visible */
+        rgba(244, 123, 32, 0.05)  /* BSU Orange — subtle warm tint */
+    );
+}
 .hero-title{ font-size: clamp(1.8rem, 3.2vw, 2.6rem); color: var(--bsu-orange); font-weight:800; margin-bottom:12px; }
 .hero-sub{ font-size: 1.05rem; color: #0f172a; }
 .hero-cta .btn{ margin-right: 8px; }
@@ -159,6 +167,7 @@ body{
     transform: scale(1.2);
     filter: drop-shadow(0 0 10px rgba(244,123,32,1));
 }
+
 
 
 
