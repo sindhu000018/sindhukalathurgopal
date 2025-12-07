@@ -86,9 +86,10 @@ body{
   margin-left: 260px;
   padding: 34px;
   min-height:100vh;
-  background: var(--content-bg);
+  background: rgba(0,51,160,0.03);
   color: inherit;
   box-shadow: -6px 0 22px rgba(2,6,23,0.04);
+	
 }
 
 /* hero */
@@ -167,6 +168,7 @@ body{
     transform: scale(1.2);
     filter: drop-shadow(0 0 10px rgba(244,123,32,1));
 }
+
 
 
 
