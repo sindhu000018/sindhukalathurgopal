@@ -82,15 +82,25 @@ body{
 .sidebar-social a:hover, .hero-social a:hover{ color: var(--bsu-orange); transform: translateY(-3px); }
 
 /* main content */
+/* main content – boosted BSU blue */
 .main-content{
   margin-left: 260px;
   padding: 34px;
   min-height:100vh;
-  background: rgba(0,51,160,0.03);
+
+  /* More blue + deeper gradient */
+  background: linear-gradient(
+      180deg,
+      rgba(0,51,160,0.14) 0%,   /* stronger BSU blue tint */
+      rgba(0,51,160,0.08) 35%,  /* visible soft blue */
+      rgba(255,255,255,0.92) 100%
+  );
+
+  border-left: 6px solid rgba(0,51,160,0.22);
+  box-shadow: -8px 0 30px rgba(2,6,23,0.05);
   color: inherit;
-  box-shadow: -6px 0 22px rgba(2,6,23,0.04);
-	
 }
+
 
 /* hero */
 .hero {
@@ -168,6 +178,7 @@ body{
     transform: scale(1.2);
     filter: drop-shadow(0 0 10px rgba(244,123,32,1));
 }
+
 
 
 
