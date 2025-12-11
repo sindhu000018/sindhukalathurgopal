@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Publications — Sindhu R.K. Gopal</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head><body>
+
+   <aside id="sidebar" class="sidebar" aria-label="Primary">
+    <div class="sidebar-inner text-center">
+      <img src="assets/img/profile.png" alt="Sindhu profile" class="profile-img" />
+      <h3 class="sidebar-name">Sindhu Reddy Kalathur Gopal</h3>
+      <div class="typing-wrap"><span class="typing" aria-live="polite"></span></div>
+      <nav class="sidebar-nav mt-3" aria-label="Main navigation">
+        <a class="btn btn-outline-light w-100 mb-2" href="about.html">About</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="news.html">Recent News</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="experience.html">Experience</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="research-group.html">Research Group</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="skills.html">Skills</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="education.html">Education</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="publications.html">Publications</a>
+        <a class="btn btn-outline-light w-100 mb-2" href="contact.html">Contact</a>
+        <a class="btn btn-warning w-100 mt-3 resume-btn" href="https://drive.google.com/YOUR-RESUME-LINK" target="_blank" rel="noopener"><i class="bi bi-file-earmark-person-fill me-2"></i> Resume</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <ul class="pub-list">
+          <li><b>BrainKey: Unlocking User Accounts Using Brainwave Authentication.</b> Transactions on Information Forensics and Security (Under Review), 2025.</li>
+          <li><b>Behavioral Biometrics for VR-based Active Authentication.</b> CCS, 2024.</li>
+          <li><b>Side-Channel Attacks on Smart Wearables.</b> IEEE S&P, 2024.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="site-footer text-center py-4"><div class="container"><small>© <span id="year"></span></small></div></footer>
+  </main>
+
+  <script> document.querySelectorAll('.sidebar-nav a').forEach(a=> { if(a.getAttribute('href') === 'publications.html') a.classList.add('active-nav'); }); document.getElementById('year').textContent = new Date().getFullYear(); </script>
+</body></html>
