@@ -184,3 +184,14 @@ body{
 
 /* active nav small helper */
 .sidebar-nav .btn.active-nav { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+
+.hero-title {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    white-space: normal;
+  }
+}
+
