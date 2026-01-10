@@ -194,4 +194,9 @@ body{
     white-space: normal;
   }
 }
+.rg-member-img {
+  border: 3px solid #007bff; /* optional: color accent */
+  object-fit: cover;
+}
+
 
